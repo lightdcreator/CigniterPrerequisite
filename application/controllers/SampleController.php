@@ -20,4 +20,12 @@ class SampleController extends CI_Controller
 
 		echo "I am about located @ SampleController";
 	}
+
+	//Including parameter
+	public function blog($blog_url = '')
+	{
+
+		echo "$blog_url";
+		$this->load->view('blog/Blog');
+	}
 }

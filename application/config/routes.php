@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -55,3 +55,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 //For testing creating route
 $route['abouts'] = 'Welcome/demo';
+
+//calling section as route including controller and method name
+$route['section'] = 'SampleController/about';
+
+//Passing parameters
+//$route['blog/(:any)'] = 'SampleController/blog/$1';
+
+//using num
+$route['blog/(:num)'] = 'SampleController/blog/$1';
