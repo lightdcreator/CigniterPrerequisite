@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//--------------------------------------------------------------------
 //For testing creating route
 $route['abouts'] = 'Welcome/demo';
 
@@ -64,3 +65,8 @@ $route['section'] = 'SampleController/about';
 
 //using num
 $route['blog/(:num)'] = 'SampleController/blog/$1';
+//--------------------------------------------------------------------
+
+$route['employee'] = 'frontend/EmployeeController/index';
+
+$route['employee/add'] = 'frontend/EmployeeController/create';
