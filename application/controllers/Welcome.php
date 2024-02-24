@@ -21,6 +21,8 @@ class Welcome extends CI_Controller
 	 */
 	public function index()
 	{
+		//load database to check the connection
+		//$this->load->database();
 		$this->load->view('welcome_message');
 	}
 
@@ -28,5 +30,17 @@ class Welcome extends CI_Controller
 	{
 		//echo "My Friend";
 		$this->load->view('about');
+	}
+
+
+	//Experimenting Views
+	public function homepage()
+	{
+		// $data['title'] = "Helo I am Francis Junior Dev of Real Faith Solutions";
+		$this->load->model('student/Student_model');
+		$title = $this->Student_model->homedemo();
+		$data['title'] = $title;
+		$data['body'] = "I am inspired to exceed my limitation because I need to inspire our ojt and to help my Team!";
+		$this->load->view('home', $data);
 	}
 }

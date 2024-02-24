@@ -22,6 +22,14 @@ class Student_model extends CI_Model
 			return $result = "User 2";
 		}
 	}
+
+
+	//Returning title to controller to call in the view page
+	public function homedemo()
+	{
+
+		return $title = "Helo I am Francis Junior Dev of Real Faith Solutions edited";
+	}
 }
 
 
