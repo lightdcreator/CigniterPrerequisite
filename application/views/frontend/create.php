@@ -5,30 +5,34 @@
 				<div class="card-header">
 					<h5>
 						How to insert Data into Database
-						<a href="<?php echo base_url('employee/add'); ?>" class="btn btn-danger float-right">Back</a>
+						<a href="<?php echo base_url('employee/store'); ?>" class="btn btn-danger float-right">Back</a>
 					</h5>
 				</div>
 				<div class="card-body">
-					<form action="">
+					<form action="<?php echo base_url('employee/store'); ?>" method="POST">
 						<div class="form-group">
 							<label for="">First Name</label>
-							<input type="text" class="form-control">
+							<input type="text" name="firstname" class="form-control">
+							<small><?php echo form_error('firstname'); ?></small>
 						</div>
 
 						<div class="form-group">
 							<label for="">Last Name</label>
-							<input type="text" class="form-control">
+							<input type="text" name="lastname" class="form-control">
+							<small><?php echo form_error('lastname'); ?></small>
 						</div>
 
 
 						<div class="form-group">
 							<label for="">Phone Number</label>
-							<input type="text" class="form-control">
+							<input type="text" name="phone" class="form-control">
+							<small><?php echo form_error('phone'); ?></small>
 						</div>
 
 						<div class="form-group">
 							<label for="">Email ID</label>
-							<input type="text" class="form-control">
+							<input type="text" name="emailid" class="form-control">
+							<small><?php echo form_error('emailid'); ?></small>
 						</div>
 
 						<div class="form-group">

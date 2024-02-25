@@ -70,3 +70,4 @@ $route['blog/(:num)'] = 'SampleController/blog/$1';
 $route['employee'] = 'frontend/EmployeeController/index';
 
 $route['employee/add'] = 'frontend/EmployeeController/create';
+$route['employee/store'] = 'frontend/EmployeeController/store';

@@ -21,16 +21,33 @@
 							</tr>
 						</thead>
 						<tbody>
-							<td>Francis Oliver</td>
-							<td>Hiloma</td>
-							<td>09456789123</td>
-							<td>francis@gmail.com</td>
-							<td>
-								<a href="" class="btn btn-success">Edit</a>
-							</td>
-							<td>
-								<a href="" class="btn btn-danger">Delete</a>
-							</td>
+
+							<tr>
+								<?php foreach ($employee as $row) : ?>
+
+									<td><?php echo $row->id; ?></td>
+									<td><?= $row->firstname ?></td>
+									<td><?= $row->lastname ?></td>
+									<td><?= $row->phone ?></td>
+									<td><?= $row->emailid ?></td>
+
+
+									<!-- <td>Francis Oliver</td>
+									<td>Hiloma</td>
+									<td>09456789123</td>
+									<td>francis@gmail.com</td> -->
+
+
+
+
+									<td>
+										<a href="" class="btn btn-success">Edit</a>
+									</td>
+									<td>
+										<a href="" class="btn btn-danger">Delete</a>
+									</td>
+							</tr>
+						<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div>
