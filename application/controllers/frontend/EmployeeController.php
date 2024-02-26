@@ -51,16 +51,6 @@ class EmployeeController extends CI_Controller
 			// redirect(base_url('employee/add'));
 		}
 
-
-
-
-
-
-
-
-
-
-
 		//For Testing use var_dump(); it is like in laravel dd();
 		// $data = [
 		// 	'firstname' => $this->input->post('firstname'),
@@ -72,6 +62,19 @@ class EmployeeController extends CI_Controller
 		// ];
 		// var_dump($data);
 
+	}
+
+
+	public function edit($id)
+	{
+
+		$this->load->view('template/header');
+
+		$this->load->model('employee/Employee_model', 'empedit');
+		$data['employee'] = $this->empedit->editEmployee($id);
+		
+		$this->load->view('frontend/edit', $data);
+		$this->load->view('template/footer');
 	}
 }
 

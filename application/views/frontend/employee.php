@@ -12,6 +12,7 @@
 					<table class="table table-bordered">
 						<thead>
 							<tr>
+								<th>ID</th>
 								<th>First Name</th>
 								<th>Last Name</th>
 								<th>Phone Number</th>
@@ -41,7 +42,7 @@
 
 
 									<td>
-										<a href="" class="btn btn-success">Edit</a>
+										<a href="<?php echo base_url('employee/edit/' . $row->id); ?>" class="btn btn-success">Edit</a>
 									</td>
 									<td>
 										<a href="" class="btn btn-danger">Delete</a>
