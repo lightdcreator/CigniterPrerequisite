@@ -76,6 +76,36 @@ class EmployeeController extends CI_Controller
 		$this->load->view('frontend/edit', $data);
 		$this->load->view('template/footer');
 	}
+
+
+	public function update($id) 
+	{
+
+		$this->form_validation->set_rules('firstname', 'First Name', 'required');
+		$this->form_validation->set_rules('lastname', 'Last Name', 'required');
+		$this->form_validation->set_rules('phone', 'Phone Number', 'required');
+		$this->form_validation->set_rules('emailid', 'Email ID', 'required');
+		if ($this->form_validation->run()) :
+
+			$data = [
+				'firstname' => $this->input->post('firstname'),
+				'lastname' => $this->input->post('lastname'),
+				'phone' => $this->input->post('phone'),
+				'emailid' => $this->input->post('emailid'),
+			];
+			$this->load->model('employee/Employee_model', 'empupdate');
+			$this->empupdate->updatEmployee($data, $id);
+			redirect(base_url('employee'));
+
+		else:
+			$this->edit($id);
+
+		endif;
+		
+	}
+
+
+
 }
 
 /* End of file EmployeeController.php and path \application\controllers\frontend\EmployeeController.php */
