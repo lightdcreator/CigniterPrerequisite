@@ -45,7 +45,7 @@
 										<a href="<?php echo base_url('employee/edit/' . $row->id); ?>" class="btn btn-success">Edit</a>
 									</td>
 									<td>
-										<a href="" class="btn btn-danger">Delete</a>
+										<a href="<?php echo base_url('employee/delete/' . $row->id); ?>" class="btn btn-danger">Delete</a>
 									</td>
 							</tr>
 						<?php endforeach; ?>
