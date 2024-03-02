@@ -15,7 +15,19 @@
 			e.preventDefault();
 
 
-			alert("I am Here");
+
+			confirmDialog = confirm("Are you sure you want to delete this data?");
+             if (confirmDialog) {
+              var $id = $(this).val();
+				alert($id);
+				}
+
+
+
+
+			//alert("I am Here");
+
+			
 
 
 			});
