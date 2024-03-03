@@ -18,8 +18,21 @@
 
 			confirmDialog = confirm("Are you sure you want to delete this data?");
              if (confirmDialog) {
-              var $id = $(this).val();
-				alert($id);
+
+              var id = $(this).val();
+				//alert($id);
+
+				$.ajax({
+					type: "POST",
+					url: "/employee/confirmdelete/"+id,
+					success: function(response) {
+						alert("Data Deleted Successfully");
+						window.location.reload();
+					}
+});
+
+
+
 				}
 
 
@@ -38,6 +51,26 @@
 </script>
 
 
+<!-- <script>
+	$(document).ready(function(){
+		$('.confirm-delete').click(function (e){
+			e.preventDefault();
+			var id = $(this).val();
+
+			confirmDialog = confirm("Are you sure you want to delete this data?");
+			if (confirmDialog) {
+				$.ajax({
+					type: "DELETE",
+					url: "/employee/confirmdelete/" + id,
+					success: function(response) {
+						alert("Data Deleted Successfully");
+						window.location.reload();
+					}
+				});
+			}
+		});
+	});
+</script> -->
 
 </body>
 

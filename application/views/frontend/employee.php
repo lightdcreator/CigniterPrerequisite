@@ -49,8 +49,9 @@
 										<a href="<?php echo base_url('employee/delete/' . $row->id); ?>" class="btn btn-danger">Delete</a>
 									</td>
 									<td>
-										<button type="button" class="btn btn-danger confirm-delete" value="<?= $row->id; ?>">Confirm Delete</button>
+									<button type="button" class="btn btn-danger confirm-delete" value="<?= $row->id; ?>">Confirm Delete</button>
 									</td>
+
 							</tr>
 						<?php endforeach; ?>
 						</tbody>
