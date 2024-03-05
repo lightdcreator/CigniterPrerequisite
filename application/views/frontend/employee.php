@@ -9,7 +9,7 @@
 					</h5>
 				</div>
 				<div class="card-body">
-					<table class="table table-bordered">
+					<table id="datatable1" class="table table-bordered">
 						<thead>
 							<tr>
 								<th>ID</th>
