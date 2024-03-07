@@ -45,6 +45,7 @@ class EmployeeController extends CI_Controller
 
 			$this->load->model('employee/Employee_model', 'emp');
 			$this->emp->insertemployee($data);
+			$this->session->set_flashdata('status', 'Employee Data inserted Successfully');
 			redirect(base_url('employee'));
 		} else {
 			$this->create();

@@ -2,12 +2,20 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card">
+
 				<div class="card-header">
+				<?php if($this->session->flashdata('status')) : ?>
+					<div class="alert alert-success">
+						<?= $this->session->flashdata('status'); ?>
+					</div>
+					<?php endif; ?>
+
 					<h5>
 						How to insert Data into Database
 						<a href="<?php echo base_url('employee/add'); ?>" class="btn btn-primary float-right">Add Employee</a>
 					</h5>
 				</div>
+
 				<div class="card-body">
 					<table id="datatable1" class="table table-bordered">
 						<thead>
